@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Booking from "./componants/Booking";
 import BookingCTA from "./componants/BookingCTA";
 import Features from "./componants/Features";
@@ -7,8 +8,15 @@ import LandingContent from "./componants/LandingContent";
 import Nav from "./componants/Nav";
 import Services from "./componants/Services";
 import './App.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    AOS.init(); // Initialize AOS library
+    AOS.refresh(); // Refresh AOS library to apply animations
+  }, []);
+
   return (
     <>
       <Nav />

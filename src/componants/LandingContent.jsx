@@ -15,9 +15,11 @@ const LandingContent = () => {
             Experience Unmatched Craftsmanship and Unforgettable Grooming at
             Dapper Studio’s
           </p>
-          <button className="bg-[#d9d9d9] rounded-lg my-4 py-2 px-3 drop-shadow">
-            Book Your Appointment Today!
+          <a href="#booking">
+          <button className="bg-[#d9d9d9] rounded-lg mt-10 py-2 px-3 drop-shadow">
+            Book Your Appointment Now!
           </button>
+        </a>
         </div>
       </div>
       <div className="flex flex-col items-center"

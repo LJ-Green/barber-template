@@ -25,12 +25,11 @@ const Nav = () => {
   useEffect(() => {
     const checkScreenWidth = () => {
       setIsMobile(window.innerWidth < 640);
+      setShowMenu(false); // Hide menu on resize
     };
 
-    // Check initial screen width on component mount
     checkScreenWidth();
 
-    // Listen for screen width changes
     window.addEventListener('resize', checkScreenWidth);
 
     return () => {
@@ -43,7 +42,7 @@ const Nav = () => {
   };
 
   return (
-    <div className='flex bg-gray-200 h-[100px] justify-between items-center'>
+    <div className='flex h-[100px] justify-between items-center'>
       <div>
         <img className='w-[200px]' src={Logo} alt='Logo' />
       </div>
@@ -53,24 +52,24 @@ const Nav = () => {
             <img className='w-6 h-6' src={Menu} alt='Hamburger Icon' />
           </button>
         )}
-        {!isMobile && (
-          <ul className='md:flex'>
-            <li className='mr-6'>
-              <a href='/'>Home</a>
-            </li>
-            <li className='mr-6'>
-              <a href='/services'>Features</a>
-            </li>
-            <li className='mr-6'>
-              <a href='/gallery'>Services</a>
-            </li>
-            <li className='mr-6'>
-              <a href='/location'>Booking</a>
-            </li>
-            <li className='mr-4'>
-              <a href='/location'>Contact Us</a>
-            </li>
-          </ul>
+        {(showMenu || !isMobile) && (
+          <ul className='md:flex mt-50'>
+          <li className='mr-6'>
+            <a href='#home'>Home</a>
+          </li>
+          <li className='mr-6'>
+            <a href='#features'>Features</a>
+          </li>
+          <li className='mr-6'>
+            <a href='#services'>Services</a>
+          </li>
+          <li className='mr-6'>
+            <a href='#booking'>Booking</a>
+          </li>
+          <li className='mr-4'>
+            <a href='#footer'>Contact Us</a>
+          </li>
+        </ul>
         )}
         {showMenu && isMobile && (
           <PopupMenu menuRef={menuRef} setShowMenu={setShowMenu} />

@@ -6,12 +6,12 @@ import NumberFour from "./../assets/No-4.png";
 
 const Features = () => {
   return (
-    <div className="features-content">
+    <div className="features-content" id="features">
       <h1 className="text-white text-center text-[40px] py-10">Features</h1>
-      <div>
+      <div className="lg:flex">
         <div className="flex flex-col items-center">
-          <img className="w-[100px] absolute" src={NumberOne} />
-          <div className="mt-[80px]">
+          <img className="w-[80px] absolute" src={NumberOne} alt="num" />
+          <div className="mt-[75px]">
             <h2 className="text-[32px] text-white text-center">Experts</h2>
             <p className="text-[20px] text-white text-center mx-10 mb-10">
               Our team of highly trained barbers is dedicated to mastering their
@@ -21,7 +21,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <img className="w-[100px] absolute" src={NumberTwo} />
+          <img className="w-[100px] absolute" src={NumberTwo} alt="num" />
           <div className="mt-[80px]">
             <h2 className="text-[32px] text-white text-center">
               Personalized Service
@@ -35,7 +35,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <img className="w-[100px] absolute" src={NumberThree} />
+          <img className="w-[100px] absolute" src={NumberThree} alt="num" />
           <div className="mt-[80px]">
             <h2 className="text-[32px] text-white text-center">
               Precision and Perfection
@@ -48,7 +48,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <img className="w-[100px] absolute" src={NumberFour} />
+          <img className="w-[100px] absolute" src={NumberFour} alt="num" />
           <div className="mt-[80px]">
             <h2 className="text-[32px] text-white text-center">
               Premium Products
